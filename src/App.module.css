@@ -7,3 +7,15 @@
 .qwerty {
   font-size: 100px;
 }
+.flex {
+  display: flex;
+  flex-direction: row;
+  margin-left: 150px;
+  gap: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.rock {
+  margin-top: 40px;
+  padding: 20px;
+}

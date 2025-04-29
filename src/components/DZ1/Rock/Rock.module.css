@@ -1,0 +1,14 @@
+.title {
+  font-size: 40px;
+  color: crimson;
+  text-align: center;
+}
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+.item {
+  box-shadow: 0px 0px 6px 4px gray;
+  padding: 16px;
+}

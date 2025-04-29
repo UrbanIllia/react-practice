@@ -1,0 +1,182 @@
+[
+  {
+    "name": "The Beatles",
+    "years_active": "1960-1970",
+    "country": "United Kingdom",
+    "genre": "Rock/Pop Rock",
+    "official_albums_count": 13,
+    "photo_url": "https://commons.wikimedia.org/wiki/File:The_Beatles_arrive_at_JFK_Airport.jpg",
+    "description": "The Beatles revolutionized popular music with their innovative songwriting and studio techniques, creating timeless hits like 'Hey Jude' and 'Let It Be'."
+  },
+  {
+    "name": "Led Zeppelin",
+    "years_active": "1968-1980",
+    "country": "United Kingdom",
+    "genre": "Hard Rock/Heavy Metal",
+    "official_albums_count": 8,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Led_Zeppelin_1969.jpg",
+    "description": "Led Zeppelin pioneered heavy metal with their powerful performances and iconic tracks like 'Stairway to Heaven' and 'Whole Lotta Love'."
+  },
+  {
+    "name": "The Rolling Stones",
+    "years_active": "1962-present",
+    "country": "United Kingdom",
+    "genre": "Rock/Blues Rock",
+    "official_albums_count": 30,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/The_Rolling_Stones_2_July_1965.jpg",
+    "description": "Known as the 'bad boys' of rock, The Rolling Stones have delivered blues-infused rock anthems like 'Satisfaction' and 'Paint It Black' for over six decades."
+  },
+  {
+    "name": "Pink Floyd",
+    "years_active": "1965-1995",
+    "country": "United Kingdom",
+    "genre": "Progressive Rock/Psychedelic Rock",
+    "official_albums_count": 15,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Pink_Floyd_1971.jpg",
+    "description": "Pink Floyd created immersive concept albums like 'The Dark Side of the Moon' and 'The Wall,' known for their elaborate live shows and deep lyrics."
+  },
+  {
+    "name": "The Who",
+    "years_active": "1964-present",
+    "country": "United Kingdom",
+    "genre": "Rock/Hard Rock",
+    "official_albums_count": 12,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/The_Who_1965.JPG",
+    "description": "The Who are famous for their energetic live performances and rock operas like 'Tommy,' with hits like 'My Generation' and 'Baba O'Riley'."
+  },
+  {
+    "name": "The Doors",
+    "years_active": "1965-1973",
+    "country": "United States",
+    "genre": "Psychedelic Rock",
+    "official_albums_count": 6,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/The_Doors_at_the_Hollywood_Bowl_1968.jpg",
+    "description": "Led by the charismatic Jim Morrison, The Doors produced haunting hits like 'Light My Fire' and 'Riders on the Storm' before Morrison's untimely death."
+  },
+  {
+    "name": "The Eagles",
+    "years_active": "1971-1980, 1994-present",
+    "country": "United States",
+    "genre": "Country Rock/Soft Rock",
+    "official_albums_count": 7,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/The_Eagles_1972.jpg",
+    "description": "The Eagles defined the California rock sound with hits like 'Hotel California' and 'Take It Easy,' blending country and rock seamlessly."
+  },
+  {
+    "name": "Fleetwood Mac",
+    "years_active": "1967-present",
+    "country": "United Kingdom/United States",
+    "genre": "Pop Rock/Soft Rock",
+    "official_albums_count": 18,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Fleetwood_Mac_1977.jpg",
+    "description": "Fleetwood Mac's 'Rumours' album is a 1970s classic, featuring hits like 'Go Your Own Way' and 'Dreams,' reflecting the band's personal turmoil."
+  },
+  {
+    "name": "Creedence Clearwater Revival",
+    "years_active": "1967-1972",
+    "country": "United States",
+    "genre": "Swamp Rock/Southern Rock",
+    "official_albums_count": 7,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Creedence_Clearwater_Revival_1968.jpg",
+    "description": "Led by John Fogerty, CCR delivered rootsy rock anthems like 'Proud Mary' and 'Bad Moon Rising,' capturing the late '60s American spirit."
+  },
+  {
+    "name": "Black Sabbath",
+    "years_active": "1968-2017",
+    "country": "United Kingdom",
+    "genre": "Heavy Metal",
+    "official_albums_count": 19,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Black_Sabbath_1970.jpg",
+    "description": "Black Sabbath is credited with creating heavy metal, with dark, heavy tracks like 'Paranoid' and 'Iron Man' led by Ozzy Osbourne."
+  },
+  {
+    "name": "The Kinks",
+    "years_active": "1963-1996",
+    "country": "United Kingdom",
+    "genre": "Rock/Pop Rock",
+    "official_albums_count": 24,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/The_Kinks_1965.jpg",
+    "description": "The Kinks blended British Invasion rock with social commentary in songs like 'You Really Got Me' and 'Waterloo Sunset'."
+  },
+  {
+    "name": "Jethro Tull",
+    "years_active": "1967-2014",
+    "country": "United Kingdom",
+    "genre": "Progressive Rock/Folk Rock",
+    "official_albums_count": 22,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Jethro_Tull_1973.jpg",
+    "description": "Jethro Tull stood out with their use of flute and classical influences, creating albums like 'Aqualung' and 'Thick as a Brick'."
+  },
+  {
+    "name": "The Byrds",
+    "years_active": "1964-1973",
+    "country": "United States",
+    "genre": "Folk Rock/Jangle Pop",
+    "official_albums_count": 12,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/The_Byrds_1965.jpg",
+    "description": "The Byrds pioneered folk rock with their jangly sound, covering Bob Dylan songs and creating hits like 'Mr. Tambourine Man'."
+  },
+  {
+    "name": "Deep Purple",
+    "years_active": "1968-present",
+    "country": "United Kingdom",
+    "genre": "Hard Rock/Heavy Metal",
+    "official_albums_count": 22,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Deep_Purple_1971.jpg",
+    "description": "Deep Purple helped define hard rock with classics like 'Smoke on the Water' and 'Highway Star,' known for their virtuosic playing."
+  },
+  {
+    "name": "The Allman Brothers Band",
+    "years_active": "1969-2014",
+    "country": "United States",
+    "genre": "Southern Rock/Blues Rock",
+    "official_albums_count": 12,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/The_Allman_Brothers_Band_1970.jpg",
+    "description": "The Allman Brothers Band blended blues, jazz, and rock, with epic tracks like 'Whipping Post' and live album 'At Fillmore East'."
+  },
+  {
+    "name": "Lynyrd Skynyrd",
+    "years_active": "1964-1977, 1987-present",
+    "country": "United States",
+    "genre": "Southern Rock",
+    "official_albums_count": 14,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Lynyrd_Skynyrd_1977.jpg",
+    "description": "Lynyrd Skynyrd is the definitive Southern rock band, known for 'Sweet Home Alabama' and 'Free Bird,' despite a tragic plane crash in 1977."
+  },
+  {
+    "name": "The Moody Blues",
+    "years_active": "1964-present",
+    "country": "United Kingdom",
+    "genre": "Progressive Rock/Symphonic Rock",
+    "official_albums_count": 16,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/The_Moody_Blues_1970.jpg",
+    "description": "The Moody Blues fused rock with orchestral elements, creating hits like 'Nights in White Satin' and albums like 'Days of Future Passed'."
+  },
+  {
+    "name": "Jefferson Airplane",
+    "years_active": "1965-1972",
+    "country": "United States",
+    "genre": "Psychedelic Rock",
+    "official_albums_count": 7,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Jefferson_Airplane_1967.jpg",
+    "description": "Jefferson Airplane led the '60s counterculture with psychedelic hits like 'White Rabbit' and 'Somebody to Love'."
+  },
+  {
+    "name": "Grateful Dead",
+    "years_active": "1965-1995",
+    "country": "United States",
+    "genre": "Psychedelic Rock/Jam Band",
+    "official_albums_count": 13,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Grateful_Dead_1967.jpg",
+    "description": "Grateful Dead built a cult following with their improvisational live shows and songs like 'Truckin’' and 'Casey Jones'."
+  },
+  {
+    "name": "The Animals",
+    "years_active": "1963-1969, 1975-1983",
+    "country": "United Kingdom",
+    "genre": "Blues Rock/R&B",
+    "official_albums_count": 10,
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/The_Animals_1964.jpg",
+    "description": "The Animals brought gritty blues rock to the British Invasion with hits like 'House of the Rising Sun' and 'Don’t Let Me Be Misunderstood'."
+  }
+]
