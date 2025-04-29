@@ -1,15 +1,20 @@
-import css from "./App.module.css";
+import { HandMetal, Send } from "lucide-react";
 import FriendList from "./components/DZ1/FriendList/FriendList";
 import Profile from "./components/DZ1/Profile/Profile";
-import userData from "./components/DZ1/data/userData.json";
-import friends from "./components/DZ1/data/friends.json";
-import transaction from "./components/DZ1/data/transactions.json";
 import TransactionHistory from "./components/DZ1/TransactionHistory/TransactionHistory";
 import Button from "./components/DZ1/Button/Button";
-import { HandMetal, Send } from "lucide-react";
 import Rock from "./components/DZ1/Rock/Rock";
-
+import CustomButton from "./components/DZ2/CustomButton";
+import transaction from "./components/DZ1/data/transactions.json";
+import friends from "./components/DZ1/data/friends.json";
+import userData from "./components/DZ1/data/userData.json";
+import css from "./App.module.css";
+import { useState } from "react";
 function App() {
+  const [clicks, setClicks] = useState(0);
+  const handleClick = () => {
+    setClicks(clicks + 1);
+  };
   return (
     <>
       <Profile
@@ -42,6 +47,13 @@ function App() {
         <Rock>
           <HandMetal size={38} />
         </Rock>
+      </div>
+      <button className={css.buttonClick} onClick={handleClick}>
+        Current: {clicks} clicks!{" "}
+      </button>
+      <div className={css.buttonWrapper}>
+        <CustomButton message="Playing music!">Play some music</CustomButton>
+        <CustomButton message="Uploading your data!">Upload data</CustomButton>
       </div>
     </>
   );

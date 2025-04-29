@@ -19,3 +19,29 @@
   margin-top: 40px;
   padding: 20px;
 }
+.buttonWrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+}
+.buttonClick {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: crimson;
+  color: black;
+  padding: 16px;
+  border-radius: 8px;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: all 350ms ease-in-out;
+}
+.buttonClick:active {
+  box-shadow: 0px 0px 2px 4px grey;
+}
+.buttonClick:hover {
+  background-color: rgb(56, 5, 15);
+  color: white;
+}

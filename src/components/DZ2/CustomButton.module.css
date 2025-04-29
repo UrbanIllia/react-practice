@@ -1,0 +1,13 @@
+.button {
+  background-color: gold;
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 350ms ease-in-out;
+  border-radius: 10px;
+}
+.button:hover {
+  transform: scale(1.03);
+  background-color: rgb(99, 84, 0);
+  color: wheat;
+}
