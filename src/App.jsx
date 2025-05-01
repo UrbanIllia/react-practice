@@ -1,6 +1,7 @@
 import { FaEyeSlash, FaRegEye } from "react-icons/fa";
 import { HandMetal, Send } from "lucide-react";
 import { GiPulleyHook, GiPush } from "react-icons/gi";
+import { TbArrowBigLeftLines } from "react-icons/tb";
 import FriendList from "./components/DZ1/FriendList/FriendList";
 import Profile from "./components/DZ1/Profile/Profile";
 import TransactionHistory from "./components/DZ1/TransactionHistory/TransactionHistory";
@@ -9,13 +10,14 @@ import Rock from "./components/DZ1/Rock/Rock";
 import CustomButton from "./components/DZ2/CustomButton";
 import ClickCounter from "./components/DZ2/ClickCounter";
 import ClickCounter2 from "./components/DZ2/ClickCounter2";
+import ColorPicker from "./components/DZ2/ColorPicker";
+import ToDoList from "./components/DZ2/ToDoList";
 import Update from "./components/DZ2/Update";
 import transaction from "./components/DZ1/data/transactions.json";
 import friends from "./components/DZ1/data/friends.json";
 import userData from "./components/DZ1/data/userData.json";
 import css from "./App.module.css";
 import { useState } from "react";
-import { TbArrowBigLeftLines } from "react-icons/tb";
 
 function App() {
   const [clicks, setClicks] = useState(0);
@@ -118,6 +120,8 @@ function App() {
           <Update />
         </div>
       </div>
+      <ColorPicker />
+      <ToDoList />
     </>
   );
 }
