@@ -1,4 +1,13 @@
+.wrap {
+  background-color: antiquewhite;
+}
+.title {
+  text-align: center;
+  font-size: 46px;
+  background-color: rgb(255, 248, 186);
+}
 .flex {
+  position: relative;
   display: flex;
   gap: 20px;
   padding: 40px;
@@ -13,7 +22,7 @@
 .list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 0;
+  padding: 20px;
   gap: 20px;
 }
 .input {
@@ -26,12 +35,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90px;
+  padding: 10px 20px;
   height: 36px;
   border-radius: 12px;
   background-color: rgb(80, 33, 0);
   color: white;
+  transition: all 350ms ease-in-out;
+  cursor: pointer;
 }
+.button2:hover,
 .button:hover {
   background-color: rgba(210, 105, 30, 0.586);
+}
+.button2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  height: 36px;
+  border-radius: 12px;
+  background-color: rgb(80, 33, 0);
+  color: white;
+  transition: all 350ms ease-in-out;
+  cursor: pointer;
+  margin: 20px auto;
+}
+.icon {
+  position: absolute;
+  top: 5px;
+  left: 5px;
 }

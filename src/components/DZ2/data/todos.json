@@ -1,17 +1,32 @@
 [
   {
     "id": 1,
-    "todo": "Do something nice for someone I care about",
-    "completed": true
+    "todo": "Сьесть остатки пицци с тарелки",
+    "completed": false
   },
   {
     "id": 2,
-    "todo": "Memorize the fifty states and their capitals",
+    "todo": "Похрюкать как свинья после обеда",
     "completed": false
   },
   {
     "id": 3,
-    "todo": "Watch a classic movie",
+    "todo": "Сделать вид что удивлен",
+    "completed": false
+  },
+  {
+    "id": 4,
+    "todo": "Пошуршать громко пакетом",
+    "completed": false
+  },
+  {
+    "id": 5,
+    "todo": "Включить на всю индийскую музыку",
+    "completed": false
+  },
+  {
+    "id": 6,
+    "todo": "Поиграть на воображаемой гитаре",
     "completed": false
   }
 ]

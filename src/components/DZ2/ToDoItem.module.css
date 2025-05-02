@@ -1,0 +1,40 @@
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  border: 2px solid black;
+  background-color: rgba(210, 105, 30, 0.586);
+  padding: 16px;
+  padding-left: 46px;
+  align-items: center;
+  border-radius: 8px;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 36px;
+  border-radius: 12px;
+  background-color: rgb(80, 33, 0);
+  color: white;
+  transition: all 350ms ease-in-out;
+  min-width: 80px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: rgba(210, 105, 30, 0.586);
+}
+.span {
+  font-size: 26px;
+}
+.input {
+  width: 40px;
+}
+.icon {
+  position: absolute;
+  top: -15px;
+  left: 5px;
+}

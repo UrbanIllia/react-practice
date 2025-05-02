@@ -1,10 +1,25 @@
+import { RiTodoLine } from "react-icons/ri";
 import css from "./ToDoItem.module.css";
-const ToDoItem = ({ todo, completed, id }) => {
+const ToDoItem = ({
+  todo,
+  completed,
+  id,
+  handleDeleteItem,
+  handleToggleTodo,
+}) => {
   return (
     <li className={css.item}>
-      <input className={css.input} type="checkbox" />
+      <RiTodoLine className={css.icon} size={45} />
+      <input
+        checked={completed}
+        className={css.input}
+        type="checkbox"
+        onChange={() => handleToggleTodo(id)}
+      />
       <span className={css.span}>{todo}</span>
-      <button className={css.btn}>Delete</button>
+      <button className={css.btn} onClick={() => handleDeleteItem(id)}>
+        Delete
+      </button>
     </li>
   );
 };
