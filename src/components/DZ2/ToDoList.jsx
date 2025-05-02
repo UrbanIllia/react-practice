@@ -3,6 +3,9 @@ import toDos from "./data/todos.json";
 import ToDoItem from "./ToDoItem";
 import css from "./ToDoList.module.css";
 import { useState } from "react";
+import { BsEmojiSmileUpsideDown, BsFillBalloonFill } from "react-icons/bs";
+import { PiSmileySad } from "react-icons/pi";
+import { GiHamburger } from "react-icons/gi";
 const ToDoList = () => {
   const [todos, setTodos] = useState(toDos);
   const [todoValue, setTodoValue] = useState("");
@@ -48,7 +51,16 @@ const ToDoList = () => {
 
   return (
     <div className={css.wrap}>
-      <h1 className={css.title}>Ну очень и очень обязательные дела</h1>
+      <h1 className={css.title}>Ну очень и очень обязательные дела!</h1>
+      <div className={css.silewrap}>
+        <GiHamburger size={60} className={css.smile} />
+        <BsFillBalloonFill size={60} className={css.smile} />
+        <BsEmojiSmileUpsideDown size={60} className={css.smile} />
+        <PiSmileySad size={60} className={css.smile} />
+        <BsEmojiSmileUpsideDown size={60} className={css.smile} />
+        <BsFillBalloonFill size={60} className={css.smile} />
+        <GiHamburger size={60} className={css.smile} />
+      </div>
       <div className={css.flex}>
         <FcTodoList className={css.icon} size={40} />
         <input

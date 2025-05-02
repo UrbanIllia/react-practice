@@ -65,3 +65,13 @@
   top: 5px;
   left: 5px;
 }
+.silewrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.smile {
+  color: rgba(210, 105, 30, 0.586);
+}
