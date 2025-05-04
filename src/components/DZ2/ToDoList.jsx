@@ -40,6 +40,11 @@ const ToDoList = () => {
   };
   // ........................................
   const addTodoItem = () => {
+    if (!todoValue || todoValue.trim() === "") {
+      alert("Введи бляха что-то нормальное...");
+      return;
+    }
+
     const NewToDo = {
       id: crypto.randomUUID(),
       todo: todoValue,

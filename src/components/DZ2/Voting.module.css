@@ -1,0 +1,29 @@
+.div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: aqua;
+  width: 480px;
+  border: 4px dotted black;
+  margin: 20px auto;
+}
+.listLi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  li {
+    font-size: 28px;
+  }
+}
+
+.iconsWrapp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 56px;
+}

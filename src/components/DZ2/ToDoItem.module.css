@@ -38,3 +38,6 @@
   top: -15px;
   left: 5px;
 }
+.completed {
+  background-color: rgba(144, 74, 24, 0.586);
+}

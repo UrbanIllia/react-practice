@@ -18,6 +18,7 @@ import friends from "./components/DZ1/data/friends.json";
 import userData from "./components/DZ1/data/userData.json";
 import css from "./App.module.css";
 import { useState } from "react";
+import Voting from "./components/DZ2/Voting";
 
 function App() {
   const [clicks, setClicks] = useState(0);
@@ -122,6 +123,7 @@ function App() {
       </div>
       <ColorPicker />
       <ToDoList />
+      <Voting />
     </>
   );
 }

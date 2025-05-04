@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "icon": "<PiWindowsLogo />"
+  },
+  {
+    "id": 2,
+    "icon": "<SiMacos />"
+  },
+  {
+    "id": 3,
+    "icon": "<SiLinux />"
+  },
+  {
+    "id": 4,
+    "icon": "<AiOutlineAndroid />"
+  }
+]

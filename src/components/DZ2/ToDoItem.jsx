@@ -1,5 +1,6 @@
 import { RiTodoLine } from "react-icons/ri";
 import css from "./ToDoItem.module.css";
+import clsx from "clsx";
 const ToDoItem = ({
   todo,
   completed,
@@ -8,7 +9,7 @@ const ToDoItem = ({
   handleToggleTodo,
 }) => {
   return (
-    <li className={css.item}>
+    <li className={clsx(css.item, completed && css.completed)}>
       <RiTodoLine className={css.icon} size={45} />
       <input
         checked={completed}

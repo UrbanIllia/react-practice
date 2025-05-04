@@ -1,0 +1,21 @@
+.listbtn {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 36px;
+    border-radius: 100px;
+    background-color: rgb(16, 195, 0);
+    color: white;
+    transition: all 350ms ease-in-out;
+    min-width: 80px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: rgb(40, 94, 28);
+  }
+}
