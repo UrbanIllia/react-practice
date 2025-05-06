@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import css from "./ClickCounter.module.css";
 
 const ClickCounter = ({ children }) => {
@@ -10,6 +10,9 @@ const ClickCounter = ({ children }) => {
     setcolor(color === "gold" ? "red" : "gold");
     setcolorSpan(colorSpan === "red" ? "gold" : "red");
   };
+  useEffect(() => {
+    console.log(`Ты меня нажал ${clicks} раз`);
+  }, [clicks]);
 
   return (
     <div className={css.wrapp} style={{ backgroundColor: color }}>

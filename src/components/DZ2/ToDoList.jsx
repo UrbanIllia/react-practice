@@ -2,12 +2,19 @@ import { FcTodoList } from "react-icons/fc";
 import toDos from "./data/todos.json";
 import ToDoItem from "./ToDoItem";
 import css from "./ToDoList.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsEmojiSmileUpsideDown, BsFillBalloonFill } from "react-icons/bs";
 import { PiSmileySad } from "react-icons/pi";
 import { GiHamburger } from "react-icons/gi";
 const ToDoList = () => {
-  const [todos, setTodos] = useState(toDos);
+  const [todos, setTodos] = useState(() => {
+    try {
+      const savedData = localStorage.getItem("ToDo-data");
+      return savedData !== null ? JSON.parse(savedData) : toDos;
+    } catch {
+      return [];
+    }
+  });
   const [todoValue, setTodoValue] = useState("");
   // ............................................
   const handleDeleteItem = (id) => {
@@ -53,7 +60,9 @@ const ToDoList = () => {
     setTodos([...todos, NewToDo]);
     setTodoValue("");
   };
-
+  useEffect(() => {
+    localStorage.setItem("ToDo-data", JSON.stringify(todos));
+  }, [todos]);
   return (
     <div className={css.wrap}>
       <h1 className={css.title}>Ну очень и очень обязательные дела!</h1>

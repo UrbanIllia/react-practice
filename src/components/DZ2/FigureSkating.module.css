@@ -1,0 +1,49 @@
+.section {
+  padding: 20px;
+  background-color: darkgrey;
+  margin-bottom: 30px;
+}
+.btn {
+  width: 70px;
+}
+.btn:hover {
+  color: rgb(97, 97, 97);
+}
+.span {
+  font-weight: 600;
+}
+.wrapMarks {
+  padding: 15px;
+}
+.resultsList {
+  gap: 35px;
+}
+.span {
+  font-size: 40px;
+  color: red;
+}
+.yellow {
+  color: yellow;
+}
+.green {
+  color: green;
+}
+.diceTitle {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.reset {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(212, 212, 212);
+  cursor: pointer;
+}
+.reset:hover {
+  background-color: rgb(161, 161, 161);
+}
+.total {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 12px;
+  display: block;
+}
