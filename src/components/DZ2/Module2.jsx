@@ -62,7 +62,7 @@ const Module2 = () => {
     const handleKeyDown = (event) => {
       console.log(event.key);
       if (event.key === "Escape") {
-        handleClickClose(intervalId);
+        handleClickClose();
       }
     };
 
