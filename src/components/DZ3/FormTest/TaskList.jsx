@@ -3,10 +3,10 @@ import css from "./TaskList.module.css";
 
 const TaskList = ({ tasks, onDelete }) => {
   return (
-    <ul>
+    <ul className={css.ul}>
       {tasks.map((item) => {
         return (
-          <li key={item.id}>
+          <li key={item.id} className={css.lili}>
             <Task data={item} onDelete={onDelete} />
           </li>
         );
