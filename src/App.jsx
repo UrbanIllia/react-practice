@@ -5,6 +5,7 @@ import Module2 from "./components/DZ2/Module2";
 import css from "./App.module.css";
 import { useEffect, useState } from "react";
 import Quiz from "./components/DZ2/kahoot/Quiz";
+import Module3 from "./components/DZ3/Module3/Module3";
 
 function App() {
   const [tabIndex, setTabIndex] = useState(() => {
@@ -22,6 +23,7 @@ function App() {
           <Tab className={css.tabitem}>Quiz</Tab>
           <Tab className={css.tabitem}>Module React 1</Tab>
           <Tab className={css.tabitem}>Module React 2</Tab>
+          <Tab className={css.tabitem}>Module React 3</Tab>
         </TabList>
 
         <TabPanel>
@@ -32,6 +34,9 @@ function App() {
         </TabPanel>
         <TabPanel>
           <Module2 />
+        </TabPanel>
+        <TabPanel>
+          <Module3 />
         </TabPanel>
       </Tabs>
     </>

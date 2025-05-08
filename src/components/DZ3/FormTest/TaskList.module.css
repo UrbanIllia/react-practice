@@ -1,0 +1,16 @@
+ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+li {
+  background-color: #7a5d44;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  color: #d4a373;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+}

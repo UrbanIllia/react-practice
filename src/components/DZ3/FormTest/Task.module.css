@@ -1,0 +1,25 @@
+.div {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.p {
+  margin: 0;
+  font-size: 16px;
+  color: #d4a373;
+}
+
+.button {
+  padding: 6px 12px;
+  background-color: #4a704a;
+  color: #f5e8d7;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #355e35;
+}
