@@ -67,3 +67,9 @@
   width: 100%;
   gap: 12px;
 }
+.error {
+  color: #f50d0d;
+  font-size: 28px;
+  margin-top: 4px;
+  display: block;
+}

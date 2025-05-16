@@ -4,13 +4,13 @@ import css from "./FormFormik.module.css";
 import Heading from "../../../Heading/Heading";
 import { GrSend } from "react-icons/gr";
 import { useId } from "react";
-
+const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i;
 const FeedbackSchema = Yup.object().shape({
   username: Yup.string()
     .min(2, "Too Short!")
     .max(50, "Too Long!")
     .required("Required"),
-  email: Yup.string().email("Must be a valid email!").required("Required"),
+  email: Yup.string().matches(re, "Is not email").required("Required"),
   message: Yup.string()
     .min(3, "Too short")
     .max(256, "Too long")
@@ -38,7 +38,11 @@ const FormFormik = () => {
   return (
     <div className={css.wrap}>
       <Heading text="Formik" />
-      <Formik initialValues={INITIAL_VALUES} onSubmit={handleSubmit}>
+      <Formik
+        initialValues={INITIAL_VALUES}
+        onSubmit={handleSubmit}
+        validationSchema={FeedbackSchema}
+      >
         <Form className={css.form}>
           <div className={css.div}>
             <label htmlFor={nameFieldId} className={css.label}>
@@ -50,7 +54,11 @@ const FormFormik = () => {
               className={css.field}
               id={nameFieldId}
             />
-            <ErrorMessage name="username" component="span" />
+            <ErrorMessage
+              name="username"
+              component="span"
+              className={css.error}
+            />
           </div>
           <div className={css.div}>
             <label htmlFor={emailFieldId} className={css.label}>
@@ -62,7 +70,7 @@ const FormFormik = () => {
               className={css.field}
               id={emailFieldId}
             />
-            <ErrorMessage name="email" component="span" />
+            <ErrorMessage name="email" component="span" className={css.error} />
           </div>
           <div className={css.div}>
             <label htmlFor={textFieldId} className={css.label}>
@@ -76,7 +84,11 @@ const FormFormik = () => {
               name="message"
               className={css.message}
             />
-            <ErrorMessage name="message" component="span" />
+            <ErrorMessage
+              name="message"
+              component="span"
+              className={css.error}
+            />
           </div>
           <div className={css.div}>
             <label htmlFor={selectFieldId} className={css.label}>
@@ -96,7 +108,11 @@ const FormFormik = () => {
               <option value="zorya">Zorya</option>
               <option value="polissia">Polissia</option>
             </Field>
-            <ErrorMessage name="select" component="span" />
+            <ErrorMessage
+              name="select"
+              component="span"
+              className={css.error}
+            />
           </div>
           <button type="submit" className={css.btn}>
             <GrSend size="60px" />

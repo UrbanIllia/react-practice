@@ -1,0 +1,15 @@
+.welcome {
+  text-align: center;
+  font-size: 40px;
+  color: rgb(186, 0, 0);
+}
+.formikLogin {
+  margin: 50px 0;
+}
+.btn {
+  margin-left: 48%;
+  /* transform: translateX(-50%); */
+}
+.inWrap {
+  margin: 30px 0;
+}

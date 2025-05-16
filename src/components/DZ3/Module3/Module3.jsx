@@ -10,13 +10,17 @@ import FormTest from "../FormTest/FormTest";
 import UncontroledForm from "../UncontroledForm/UncontroledForm";
 import ApplyForm from "./ApplyForm/ApplyForm";
 import FormFormik from "./FormFormik/FormFormik";
+import FormikLogin from "./FormikLogin/FormikLogin";
+import PhoneBook from "../DZ3/PhoneBook";
+import { ToastContainer } from "react-toastify";
 
 const Module3 = () => {
   const [select, setSelect] = useState("uk");
+
   const handleLogin = (userData) => {
     console.log(userData);
   };
-  // ...................................................
+
   const register = (data) => {
     setTimeout(() => {
       console.log("Register is running");
@@ -25,7 +29,6 @@ const Module3 = () => {
       console.log("Register is complete");
     }, 5000);
   };
-  // ...................................................
 
   return (
     <>
@@ -60,6 +63,24 @@ const Module3 = () => {
       </div>
       <div>
         <FormFormik />
+      </div>
+      <div>
+        <FormikLogin />
+      </div>
+      <div>
+        <PhoneBook />
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
       </div>
     </>
   );

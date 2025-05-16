@@ -6,6 +6,7 @@ import css from "./App.module.css";
 import { useEffect, useState } from "react";
 import Quiz from "./components/DZ2/kahoot/Quiz";
 import Module3 from "./components/DZ3/Module3/Module3";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [tabIndex, setTabIndex] = useState(() => {

@@ -1,0 +1,69 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(135deg, #4b0082, #2c003e);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-2px);
+}
+
+.textWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nameWrap,
+.numberWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.name {
+  font-size: 18px;
+  color: #e6e6fa;
+  margin: 0;
+}
+
+.number {
+  font-size: 16px;
+  color: #b19cd9;
+}
+
+.deleteBtn {
+  padding: 10px;
+  background: linear-gradient(135deg, #9400d3, #2c003e);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteBtn:hover {
+  background: linear-gradient(135deg, #e6e6fa, #9400d3);
+}
+
+.deleteBtn:active {
+  transform: scale(0.95);
+}
+
+.deleteBtn svg {
+  color: #e6e6fa;
+  font-size: 20px;
+}
+
+.nameWrap svg,
+.numberWrap svg {
+  color: #b19cd9;
+  font-size: 20px;
+}
