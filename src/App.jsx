@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Quiz from "./components/DZ2/kahoot/Quiz";
 import Module3 from "./components/DZ3/Module3/Module3";
 import "react-toastify/dist/ReactToastify.css";
+import Module4 from "./components/DZ4/Module4/Module4";
 
 function App() {
   const [tabIndex, setTabIndex] = useState(() => {
@@ -22,9 +23,10 @@ function App() {
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList className={css.tablist}>
           <Tab className={css.tabitem}>Quiz</Tab>
-          <Tab className={css.tabitem}>Module React 1</Tab>
-          <Tab className={css.tabitem}>Module React 2</Tab>
-          <Tab className={css.tabitem}>Module React 3</Tab>
+          <Tab className={css.tabitem}>React 1</Tab>
+          <Tab className={css.tabitem}>React 2</Tab>
+          <Tab className={css.tabitem}>React 3</Tab>
+          <Tab className={css.tabitem}>React 4</Tab>
         </TabList>
 
         <TabPanel>
@@ -38,6 +40,9 @@ function App() {
         </TabPanel>
         <TabPanel>
           <Module3 />
+        </TabPanel>
+        <TabPanel>
+          <Module4 />
         </TabPanel>
       </Tabs>
     </>

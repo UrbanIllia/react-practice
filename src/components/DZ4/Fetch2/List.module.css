@@ -1,0 +1,7 @@
+.listWrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 в ряд */
+  gap: 20px;
+  padding: 20px;
+  list-style: none;
+}
