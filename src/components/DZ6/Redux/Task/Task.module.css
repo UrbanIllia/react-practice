@@ -21,11 +21,11 @@
   border-radius: 4px;
   background-color: transparent;
   cursor: pointer;
-  color: #f44336;
+  color: lab(55.6% 66.03 47.67);
 }
 
 .btn:hover {
-  background-color: #e2e5e8;
+  background-color: hsl(210, 12%, 90%);
 }
 
 .btn:active {

@@ -1,0 +1,22 @@
+.wrapp {
+  padding: 50px 150px;
+  background-color: aqua;
+  border: 5px solid red;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr 2fr);
+  /* grid-template-rows: 120px 70px; */
+  column-gap: 20px;
+  row-gap: 40px;
+  grid-auto-rows: 80px;
+  /* grid-auto-flow: column; */
+}
+.item {
+  background-color: darkgreen;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
