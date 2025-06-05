@@ -9,6 +9,7 @@ import Module3 from "./components/DZ3/Module3/Module3";
 import "react-toastify/dist/ReactToastify.css";
 import Module4 from "./components/DZ4/Module4/Module4";
 import Module6 from "./components/DZ6/Module6/Module6";
+import Grid from "./components/Grid/Grid";
 
 function App() {
   const [tabIndex, setTabIndex] = useState(() => {
@@ -24,6 +25,7 @@ function App() {
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList className={css.tablist}>
           <Tab className={css.tabitem}>Quiz</Tab>
+          <Tab className={css.tabitem}>Grid</Tab>
           <Tab className={css.tabitem}>React 1</Tab>
           <Tab className={css.tabitem}>React 2</Tab>
           <Tab className={css.tabitem}>React 3</Tab>
@@ -33,6 +35,9 @@ function App() {
 
         <TabPanel>
           <Quiz />
+        </TabPanel>
+        <TabPanel>
+          <Grid />
         </TabPanel>
         <TabPanel>
           <Module1 />
