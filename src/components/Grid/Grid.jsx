@@ -27,6 +27,12 @@ const Grid = () => {
         <div className={css.item2}>Item 3</div>
         <div className={css.item2}>Item 4</div>
       </div>
+      <div className={css.wrapp3}>
+        <div className={css.item3}>Item 1</div>
+        <div className={css.item3}>Item 2</div>
+        <div className={css.item3}>Item 3</div>
+        <div className={css.item3}>Item 4</div>
+      </div>
     </div>
   );
 };
