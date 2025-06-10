@@ -1,4 +1,5 @@
 import Articles from "../Articles";
+import Articles2 from "../Articles2/Articles2";
 import Fetch2 from "../Fetch2/Fetch2";
 import Photos from "../Photos/Photos";
 import css from "./Module4.module.css";
@@ -14,6 +15,9 @@ const Module4 = () => {
       </div>
       <div>
         <Photos />
+      </div>
+      <div>
+        <Articles2 />
       </div>
     </div>
   );
