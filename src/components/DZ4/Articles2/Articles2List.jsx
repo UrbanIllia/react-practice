@@ -1,3 +1,4 @@
+import { LuMousePointerClick } from "react-icons/lu";
 import css from "./Articles2.module.css";
 
 const Articles2List = ({ cards }) => {
@@ -14,6 +15,7 @@ const Articles2List = ({ cards }) => {
             >
               {title}
             </a>
+            <LuMousePointerClick size={30} color="#ff5722" />
           </li>
         );
       })}

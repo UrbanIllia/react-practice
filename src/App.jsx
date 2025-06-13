@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Module4 from "./components/DZ4/Module4/Module4";
 import Module6 from "./components/DZ6/Module6/Module6";
 import Grid from "./components/Grid/Grid";
+import { ToastContainer } from "react-toastify/unstyled";
 
 function App() {
   const [tabIndex, setTabIndex] = useState(() => {
@@ -55,6 +56,18 @@ function App() {
           <Module6 />
         </TabPanel>
       </Tabs>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </>
   );
 }
