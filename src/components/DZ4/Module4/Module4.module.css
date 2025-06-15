@@ -6,3 +6,33 @@
   align-items: center;
   padding: 20px;
 }
+.contextWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loginWelcom {
+  font-size: 40px;
+  display: block;
+  text-align: center;
+}
+.iconHello {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.out {
+  width: 120px;
+  height: 40px;
+  cursor: pointer;
+  background-color: yellowgreen;
+  border: none;
+  border-radius: 12px;
+  display: block;
+  margin: 20px auto;
+  transition: all 350ms ease-in-out;
+}
+.out:hover {
+  background-color: rgb(1, 1, 180);
+  color: white;
+}

@@ -62,15 +62,28 @@
   color: #00a4d1;
   color: #ff0000;
 }
-.loaderWrap {
+/* ......................................... */
+/* .loaderWrap {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
   justify-content: center;
   align-items: center;
+} */
+.loaderWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
 }
-
+/* ......................................... */
 .btnLoad {
   width: 150px;
   display: block;

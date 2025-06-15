@@ -83,3 +83,47 @@ ul {
   --color-accent: #448aff;
   --color-link: linear-gradient(to bottom, #3f51b5, #5c6bc0);
 }
+.parent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 40px;
+  width: 50%;
+  color: white;
+  background-color: #091ec2;
+}
+
+.first {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: cornflowerblue;
+  color: white;
+  /* height: 200px; */
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.second {
+  /* height: 200px; */
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: green;
+  padding: 20px;
+}
+.target {
+  height: 400px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: orange;
+  padding: 20px;
+}

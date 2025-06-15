@@ -25,7 +25,7 @@ function Form({ onSubmit }) {
       <form onSubmit={handleSubmit} className={css.form}>
         <input onChange={handleChange} value={value} className={css.input} />
         <button type="submit" className={css.button}>
-          <FiSearch size="16px" />
+          <FiSearch size="20px" />
         </button>
       </form>
     </>

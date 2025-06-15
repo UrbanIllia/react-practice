@@ -1,0 +1,87 @@
+.wrapp {
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #357abd;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.item {
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  border-left: 4px solid #4a90e2;
+  transition: transform 0.2s;
+}
+
+.item:hover {
+  transform: translateX(10px);
+}
+
+/* Нові стилі для UseRef */
+.wrapp2 {
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #e8f0f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn2 {
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn2:hover {
+  background-color: #27ae60;
+  transform: scale(1.05);
+}
+
+.btn3 {
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 12px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn3:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}

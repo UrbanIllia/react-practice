@@ -32,6 +32,7 @@
 .button {
   width: 50px;
   height: 50px;
+  border-radius: 8px;
 
   font-size: 20px;
   font-weight: bold;
@@ -40,4 +41,8 @@
   position: absolute;
   top: 0;
   right: 0;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: rgb(191, 191, 191);
 }
