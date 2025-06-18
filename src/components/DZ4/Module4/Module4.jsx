@@ -36,37 +36,44 @@ const Module4 = () => {
       <button className={css.out} onClick={logout}>
         Log OUT
       </button>
-      <div>
+      <h3 className="text-8xl text-center text-blue-600 my-20">Hello</h3>
+      <div
+        className="bg-amber-600 w-30 rounded-4xl text-center 
+      mx-auto h-10 border-4 flex flex-col items-center justify-center"
+      >
+        Block
+      </div>
+      {/* <div>
         <Articles />
-      </div>
-      <div>
+      </div> */}
+      {/* <div>
         <Fetch2 />
-      </div>
+      </div> */}
       <div>
         <Photos />
       </div>
-      <div>
+      {/* <div>
         <Articles2 />
-      </div>
-      <div>
+      </div> */}
+      {/* <div>
         <UseMemo />
         <UseMemo2 />
         <UseRef />
         <UseRef2 />
         <Player source="http://media.w3.org/2010/05/sintel/trailer.mp4" />
         <Player source="https://www.w3schools.com/html/mov_bbb.mp4" />
-      </div>
-      <div style={{ padding: "0 300px 0 300px" }}>
+      </div> */}
+      {/* <div style={{ padding: "0 300px 0 300px" }}>
         <ComponentA />
         <ComponentB />
-      </div>
-      <div
+      </div> */}
+      {/* <div
         className={css.contextWrap}
         style={{ padding: "20px 200px 20px 200px" }}
       >
         <Heading text="UseContext" variant="error" />
         <UseContextExample />
-      </div>
+      </div> */}
     </div>
   );
 };

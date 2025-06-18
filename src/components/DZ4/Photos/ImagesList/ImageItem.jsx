@@ -1,9 +1,9 @@
 import css from "./ImageItem.module.css";
 
-const ImageItem = ({ item }) => {
+const ImageItem = ({ item, openModal }) => {
   return (
     <div
-      className={css.thumb}
+      className={`${css.thumb} cursor-pointer`}
       style={{ backgroundColor: item.avg_color, borderColor: item.avg_color }}
     >
       <img

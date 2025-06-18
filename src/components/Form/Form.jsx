@@ -24,7 +24,10 @@ function Form({ onSubmit }) {
     <>
       <form onSubmit={handleSubmit} className={css.form}>
         <input onChange={handleChange} value={value} className={css.input} />
-        <button type="submit" className={css.button}>
+        <button
+          type="submit"
+          className={`${css.button} flex justify-center items-center border-1 border-black`}
+        >
           <FiSearch size="20px" />
         </button>
       </form>

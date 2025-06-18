@@ -9,6 +9,7 @@ const instance = axios.create({
     orientation: "landscape",
     per_page: "9",
   },
+  timeout: 10000,
 });
 export const getPhotos = async (query, page) => {
   const { data } = await instance.get(`search`, { params: { query, page } });

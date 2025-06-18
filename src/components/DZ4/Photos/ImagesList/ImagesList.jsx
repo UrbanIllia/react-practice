@@ -3,13 +3,13 @@ import GridComponent from "../../../GridComponent/GridComponent.jsx";
 import GridItem from "../../../GridItem/GridItem.jsx";
 import ImageItem from "./ImageItem.jsx";
 
-const ImagesList = ({ images }) => {
+const ImagesList = ({ images, openModal }) => {
   return (
-    <GridComponent>
+    <GridComponent className="mb-10">
       {images.map((item) => {
         return (
           <GridItem key={item.id}>
-            <ImageItem item={item} />
+            <ImageItem item={item} openModal={openModal} />
           </GridItem>
         );
       })}
