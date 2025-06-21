@@ -1,5 +1,5 @@
 import Modal from "react-modal";
-
+Modal.setAppElement("#root");
 const customStyles = {
   overlay: {
     display: "flex",
@@ -24,7 +24,6 @@ const customStyles = {
     inset: 0,
   },
 };
-Modal.setAppElement("#root");
 
 const ModalImage = ({ image, modalIsOpen, closeModal }) => {
   return (
@@ -34,7 +33,7 @@ const ModalImage = ({ image, modalIsOpen, closeModal }) => {
       style={customStyles}
       contentLabel="Example Modal"
     >
-      <img src={image.src} alt={image.alt} />
+      <img src={image?.src} alt={image?.alt} />
     </Modal>
   );
 };

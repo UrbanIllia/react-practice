@@ -85,13 +85,11 @@ const Photos = () => {
               <BsSignDoNotEnterFill size={100} />
             </div>
           )}
-          {modalImage && (
-            <ModalImage
-              image={modalImage}
-              modalIsOpen={Boolean(modalImage)}
-              closeModal={() => openModal(null)}
-            />
-          )}
+          <ModalImage
+            image={modalImage}
+            modalIsOpen={Boolean(modalImage)}
+            closeModal={() => openModal(null)}
+          />
         </div>
       </Container>
     </Section>

@@ -18,6 +18,7 @@ import css from "./Module4.module.css";
 import { authContext } from "../../../providers/AuthProvider";
 import Login from "../../login/Login";
 import { CgHello } from "react-icons/cg";
+import ImageSearchDZ from "../ImageSearchDZ/ImageSearchDZ";
 
 const Module4 = () => {
   const { user } = useContext(authContext);
@@ -49,9 +50,9 @@ const Module4 = () => {
       {/* <div>
         <Fetch2 />
       </div> */}
-      <div>
+      {/* <div>
         <Photos />
-      </div>
+      </div> */}
       {/* <div>
         <Articles2 />
       </div> */}
@@ -74,6 +75,9 @@ const Module4 = () => {
         <Heading text="UseContext" variant="error" />
         <UseContextExample />
       </div> */}
+      <div>
+        <ImageSearchDZ />
+      </div>
     </div>
   );
 };

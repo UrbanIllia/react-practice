@@ -11,6 +11,7 @@ import Module6 from "./components/DZ6/Module6/Module6";
 import Grid from "./components/Grid/Grid";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import MemoryGame from "./components/DZ4/MemoryGame/MemoryGame";
 
 function App() {
   const [tabIndex, setTabIndex] = useState(() => {
@@ -27,6 +28,7 @@ function App() {
         <TabList className={css.tablist}>
           <Tab className={css.tabitem}>Quiz</Tab>
           <Tab className={css.tabitem}>Grid</Tab>
+          <Tab className={css.tabitem}>MemoryGame</Tab>
           <Tab className={css.tabitem}>React 1</Tab>
           <Tab className={css.tabitem}>React 2</Tab>
           <Tab className={css.tabitem}>React 3</Tab>
@@ -39,6 +41,9 @@ function App() {
         </TabPanel>
         <TabPanel>
           <Grid />
+        </TabPanel>
+        <TabPanel>
+          <MemoryGame />
         </TabPanel>
         <TabPanel>
           <Module1 />
