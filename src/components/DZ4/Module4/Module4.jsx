@@ -18,17 +18,17 @@ import css from "./Module4.module.css";
 import { authContext } from "../../../providers/AuthProvider";
 import Login from "../../login/Login";
 import { CgHello } from "react-icons/cg";
-import ImageSearchDZ from "../ImageSearchDZ/ImageSearchDZ";
+import DZApp from "../DZ/DZApp/DZApp";
 
 const Module4 = () => {
-  const { user } = useContext(authContext);
-  const { logout } = useContext(authContext);
-  if (!user) {
-    return <Login />;
-  }
+  // const { user } = useContext(authContext);
+  // const { logout } = useContext(authContext);
+  // if (!user) {
+  //   return <Login />;
+  // }
   return (
     <div>
-      <CgHello size={100} className={css.iconHello} />
+      {/* <CgHello size={100} className={css.iconHello} />
       <h2 className={css.loginWelcom}>
         Hello <span style={{ color: "blue" }}>{user}</span> !
         &nbsp;&nbsp;&nbsp;This is Module{" "}
@@ -43,7 +43,7 @@ const Module4 = () => {
       mx-auto h-10 border-4 flex flex-col items-center justify-center"
       >
         Block
-      </div>
+      </div> */}
       {/* <div>
         <Articles />
       </div> */}
@@ -76,7 +76,7 @@ const Module4 = () => {
         <UseContextExample />
       </div> */}
       <div>
-        <ImageSearchDZ />
+        <DZApp />
       </div>
     </div>
   );
