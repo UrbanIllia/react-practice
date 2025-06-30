@@ -1,8 +1,17 @@
-import { ClimbingBoxLoader } from "react-spinners";
+
+import { ScaleLoader } from "react-spinners";
+
 const Loader = () => {
   return (
-    <div className="flex justify-center items-center">
-      <ClimbingBoxLoader size={20} color="red" />
+    <div>
+      <ScaleLoader
+        color="red"
+        width={20}
+        height={100}
+        radius={20}
+        barCount={12}
+      />
+
     </div>
   );
 };

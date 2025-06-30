@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Container from "../../../Container/Container";
+
 import SearchBar from "../SearchBar/SearchBar";
 import fetchImages from "../fetchUnsplash";
 import ArticlesList from "../ArticlesList/ArticlesList";
@@ -6,81 +8,85 @@ import Loader from "../Loader/Loader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import ModalImage from "../ModalImage/ModalImage";
 
-const DZApp = () => {
-  const [query, setQuery] = useState("");
-  const [articles, setArticles] = useState([]);
-  const [loader, setLoader] = useState(false);
-  const [error, setError] = useState(null);
-  const [page, setPage] = useState(1);
-  const [currentImage, setCurrentImage] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
+import { fetchImages } from "../Api/unsplash";
+import ImageGallery from "../ImageGallery/ImageGallery";
+import ImageModal from "../ImageModal/ImageModal";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import Loader from "../Loader/Loader";
 
-  const handleSearchImages = async (newQuery) => {
+const DZApp = () => {
+  const [articles, setArticles] = useState([]);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [page, setPage] = useState(1);
+  const [query, setQuery] = useState("");
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleSearch = async (query) => {
+    setPage(1);
+    setQuery(query);
     setArticles([]);
-    setLoader(true);
     setError(null);
-    setQuery(newQuery);
+    setLoading(true);
     try {
-      const response = await fetchImages(newQuery);
+      const response = await fetchImages(query);
+      console.log(response.results);
       setArticles(response.results);
     } catch (error) {
-      setError("Фігня якась....");
+      setError(true);
     } finally {
-      setLoader(false);
+      setLoading(false);
     }
   };
-
-  const handleChangePage = async () => {
-    const newPage = page + 1;
-    setPage(newPage);
-    setLoader(true);
-    // setError(null);
-    try {
-      const response = await fetchImages(query, newPage);
-      setArticles((prev) => [...prev, ...response.results]);
-    } catch (error) {
-      setError("Фігня якась....");
-    } finally {
-      setLoader(false);
-    }
-  };
-
   const openModal = (image) => {
-    setCurrentImage(image);
-    setIsOpen(true);
+    setSelectedImage(image);
+    setModalIsOpen(true);
   };
-
   const closeModal = () => {
-    setIsOpen(false);
+    setSelectedImage(null);
+    setModalIsOpen(false);
   };
-
+  const handleAddMore = async () => {
+    const nextPage = page + 1;
+    setPage(nextPage);
+    try {
+      const data = await fetchImages(query, page);
+      setArticles((prev) => [...prev, ...data.results]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
-    <div className="my-8 mx-10 bg-emerald-200 flex flex-col justify-stretch items-center pb-5">
-      <h2 className="text-5xl text-center font-black text-lime-800">
-        Search Pictures
-      </h2>
-      <SearchBar onChangeQuery={handleSearchImages} />
-      {articles.length > 0 && (
-        <ArticlesList articles={articles} openImage={openModal} />
-      )}
-      {error && <ErrorMessage text={error} />}
-      {loader && <Loader />}
-      {articles.length > 0 && (
-        <button
-          onClick={handleChangePage}
-          type="button"
-          className="px-6 py-4 w-[200px] bg-green-300 text-green-800
-           hover:bg-green-800 hover:text-green-300 transition rounded-[50%] cursor-pointer border-2 my-4"
-        >
-          Load More
-        </button>
-      )}
-      <ModalImage
-        isOpen={isOpen}
-        onRequestClose={closeModal}
-        image={currentImage}
-      />
-    </div>
+    <Container>
+      <div className="my-8 mx-10 py-4 bg-emerald-200 flex flex-col justify-center items-center">
+        <h2 className="text-5xl text-center font-black text-lime-800">
+          Search Pictures
+        </h2>
+        <SearchBar onSubmit={handleSearch} />
+        {loading && <Loader />}
+        {error && <ErrorMessage />}
+        {articles.length > 0 && (
+          <ImageGallery articles={articles} onImageClick={openModal} />
+        )}
+        <ImageModal
+          data={selectedImage}
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+        />
+        {articles.length > 0 && (
+          <button
+            type="button"
+            onClick={handleAddMore}
+            className="w-[220px] block px-5 py-3 bg-amber-300 rounded-lg mx-auto
+             hover:bg-amber-800 hover:text-amber-200 cursor-pointer transition"
+          >
+            Add More
+          </button>
+        )}
+      </div>
+    </Container>
+
   );
 };
 

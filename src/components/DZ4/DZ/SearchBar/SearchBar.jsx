@@ -1,35 +1,37 @@
 import { useState } from "react";
+const SearchBar = ({ onSubmit }) => {
+  const [query, setQuery] = useState();
 
-const SearchBar = ({ onChangeQuery }) => {
-  const [query, setQuery] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
-    onChangeQuery(query);
-    setQuery("");
+    onSubmit(query);
   };
+
   return (
-    <div>
+    <header>
       <form
-        className="flex flex-row gap-5 justify-center items-center my-5"
         onSubmit={handleSubmit}
+        className="flex flex-row gap-5 justify-center my-5"
       >
         <input
-          className="px-2 py-2 w-[260px] bg-slate-300 rounded-3xl outline-0"
-          placeholder="Wright here..."
           type="text"
+          autoComplete="off"
           autoFocus
-          value={query}
+          placeholder="Wright something here..."
           onChange={(event) => setQuery(event.target.value)}
+          className=" bg-amber-200 px-3 py-3 w-sm border border-amber-800 rounded-md
+           text-amber-700 outline-0 hover:bg-amber-400 hover:text-amber-900 transition-all"
         ></input>
         <button
           type="submit"
-          className="px-7 py-2 bg-slate-700 text-slate-200 rounded-2xl
-           hover:bg-slate-200 hover:text-slate-700 transition cursor-pointer"
+          className="px-5 py-3 bg-amber-300 rounded-md text-amber-900 hover:text-amber-200
+           hover:bg-amber-700 transition-all cursor-pointer"
+
         >
           Search
         </button>
       </form>
-    </div>
+    </header>
   );
 };
 
