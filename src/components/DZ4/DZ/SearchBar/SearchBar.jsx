@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 const SearchBar = ({ onSubmit }) => {
   const [query, setQuery] = useState();
 
@@ -27,6 +26,7 @@ const SearchBar = ({ onSubmit }) => {
           type="submit"
           className="px-5 py-3 bg-amber-300 rounded-md text-amber-900 hover:text-amber-200
            hover:bg-amber-700 transition-all cursor-pointer"
+
         >
           Search
         </button>

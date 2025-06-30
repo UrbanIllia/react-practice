@@ -1,6 +1,12 @@
 import { useState } from "react";
 import Container from "../../../Container/Container";
+
 import SearchBar from "../SearchBar/SearchBar";
+import fetchImages from "../fetchUnsplash";
+import ArticlesList from "../ArticlesList/ArticlesList";
+import Loader from "../Loader/Loader";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import ModalImage from "../ModalImage/ModalImage";
 
 import { fetchImages } from "../Api/unsplash";
 import ImageGallery from "../ImageGallery/ImageGallery";
@@ -80,6 +86,7 @@ const DZApp = () => {
         )}
       </div>
     </Container>
+
   );
 };
 
