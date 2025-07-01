@@ -3,4 +3,17 @@
   flex-direction: row;
   gap: 20px;
   justify-content: center;
+  padding: 20px;
+  background-color: #1c2526;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.list li {
+  list-style: none;
+  transition: transform 0.2s ease;
+}
+
+.list li:hover {
+  transform: scale(1.05);
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Container from "../../../Container/Container";
 import SearchBar from "../SearchBar/SearchBar";
-
+import { RiTailwindCssFill } from "react-icons/ri";
 import { fetchImages } from "../Api/unsplash";
 import ImageGallery from "../ImageGallery/ImageGallery";
 import ImageModal from "../ImageModal/ImageModal";
@@ -53,7 +53,7 @@ const DZApp = () => {
   };
   return (
     <Container>
-      <div className="my-8 mx-10 py-4 bg-emerald-200 flex flex-col justify-center items-center">
+      <div className="my-8 mx-10 py-4 bg-emerald-200 flex flex-col justify-center relative items-center">
         <h2 className="text-5xl text-center font-black text-lime-800">
           Search Pictures
         </h2>
@@ -78,6 +78,11 @@ const DZApp = () => {
             Add More
           </button>
         )}
+        <RiTailwindCssFill
+          size={80}
+          className="absolute top-0 right-5"
+          color="blue"
+        />
       </div>
     </Container>
   );

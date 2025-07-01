@@ -2,5 +2,46 @@
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 30px;
-  border: 1px solid black;
+  border: 1px solid #4a4a4a;
+  border-radius: 8px;
+  background-color: #2f2f2f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  overflow: hidden;
+  color: #b0b0b0;
+}
+
+.thead {
+  background-color: #1c2526;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tr {
+  border-bottom: 1px solid #4a4a4a;
+  transition: background-color 0.3s ease;
+}
+
+.tr:hover {
+  background-color: #3c3c3c;
+}
+
+.thType,
+.thAmount,
+.thCurr {
+  padding: 12px 15px;
+  text-align: left;
+  color: #daa520;
+}
+
+.thType {
+  border-right: 1px solid #4a4a4a;
+}
+
+.thAmount {
+  border-right: 1px solid #4a4a4a;
+}
+
+.body {
+  font-size: 16px;
 }

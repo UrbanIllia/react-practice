@@ -21,14 +21,14 @@ import { CgHello } from "react-icons/cg";
 import DZApp from "../DZ/DZApp/DZApp";
 
 const Module4 = () => {
-  // const { user } = useContext(authContext);
-  // const { logout } = useContext(authContext);
-  // if (!user) {
-  //   return <Login />;
-  // }
+  const { user } = useContext(authContext);
+  const { logout } = useContext(authContext);
+  if (!user) {
+    return <Login />;
+  }
   return (
     <div>
-      {/* <CgHello size={100} className={css.iconHello} />
+      <CgHello size={100} className={css.iconHello} />
       <h2 className={css.loginWelcom}>
         Hello <span style={{ color: "blue" }}>{user}</span> !
         &nbsp;&nbsp;&nbsp;This is Module{" "}
@@ -43,40 +43,37 @@ const Module4 = () => {
       mx-auto h-10 border-4 flex flex-col items-center justify-center"
       >
         Block
-      </div> */}
-      {/* <div>
+      </div>
+      <div>
         <Articles />
-      </div> */}
-      {/* <div>
+      </div>
+      <div>
         <Fetch2 />
-      </div> */}
-      {/* <div>
+      </div>
+      <div>
         <Photos />
-      </div> */}
-      {/* <div>
+      </div>
+      <div>
         <Articles2 />
-      </div> */}
-      {/* <div>
+      </div>
+      <div>
         <UseMemo />
         <UseMemo2 />
         <UseRef />
         <UseRef2 />
         <Player source="http://media.w3.org/2010/05/sintel/trailer.mp4" />
         <Player source="https://www.w3schools.com/html/mov_bbb.mp4" />
-      </div> */}
-      {/* <div style={{ padding: "0 300px 0 300px" }}>
+      </div>
+      <div style={{ padding: "0 300px 0 300px" }}>
         <ComponentA />
         <ComponentB />
-      </div> */}
-      {/* <div
+      </div>
+      <div
         className={css.contextWrap}
         style={{ padding: "20px 200px 20px 200px" }}
       >
         <Heading text="UseContext" variant="error" />
         <UseContextExample />
-      </div> */}
-      <div>
-        <DZApp />
       </div>
     </div>
   );

@@ -37,11 +37,6 @@ const Module1 = () => {
           Submit <Send size={28} color="#000000" strokeWidth={2.25} />
         </Button>
       </div>
-      <div className={css.rock}>
-        <Rock>
-          <HandMetal size={38} />
-        </Rock>
-      </div>
     </section>
   );
 };

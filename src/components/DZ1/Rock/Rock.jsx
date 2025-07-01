@@ -2,10 +2,12 @@ import { Lia500Px } from "react-icons/lia";
 import groups from "../data/rock-groups.json";
 import css from "./Rock.module.css";
 import RockItem from "./RockItem";
-const Rock = ({ children }) => {
+import { HandMetal } from "lucide-react";
+const Rock = () => {
   return (
-    <div>
-      <h1 className={css.title}>Rock music {children}</h1>
+    <div className={css.wrapp}>
+      <h1 className={css.title}>Rock music</h1>
+      <HandMetal size={38} color="gold" />
       <ul className={css.list}>
         {groups.map((group, id) => {
           return (

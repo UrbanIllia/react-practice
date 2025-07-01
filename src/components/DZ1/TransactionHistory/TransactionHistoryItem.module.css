@@ -1,0 +1,45 @@
+.tr {
+  border-bottom: 1px solid #4a4a4a;
+  transition: background-color 0.3s ease;
+}
+
+.tr:hover {
+  background-color: #3c3c3c;
+}
+
+.td {
+  padding: 12px 15px;
+  text-align: left;
+  color: #b0b0b0;
+}
+
+.td2 {
+  padding: 12px 15px;
+  text-align: left;
+  color: #b0b0b0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.td3 {
+  padding: 12px 15px;
+  text-align: left;
+  color: #b0b0b0;
+}
+
+.plus {
+  color: #32cd32;
+  font-size: 18px;
+}
+
+.minus {
+  color: #ff4500;
+  font-size: 18px;
+}
+
+.tr:hover .plus,
+.tr:hover .minus {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}

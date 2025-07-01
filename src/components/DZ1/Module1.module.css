@@ -1,12 +1,9 @@
 .flex {
   display: flex;
   flex-direction: row;
-  margin-left: 150px;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   padding-top: 50px;
   padding-bottom: 50px;
-}
-.rock {
-  margin-top: 40px;
-  padding: 20px;
 }

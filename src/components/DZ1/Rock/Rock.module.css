@@ -1,14 +1,44 @@
+.wrapp {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #1c2526;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .title {
   font-size: 40px;
   color: crimson;
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  padding: 20px 0;
+  background-color: #1c2526;
+  color: #daa520;
 }
+
 .list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
+  padding: 20px;
+  background-color: #1c2526;
 }
+
 .item {
   box-shadow: 0px 0px 6px 4px gray;
   padding: 16px;
+  background-color: #3c3c3c;
+  border: 1px solid #4a4a4a;
+  border-radius: 8px;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 12px 6px #b0b0b0;
 }

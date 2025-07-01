@@ -1,9 +1,59 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2f2f2f;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #4a4a4a;
+  text-align: center;
+  width: 150px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background-color: #3c3c3c;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #b0b0b0;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin: 5px 0;
+  color: #b0b0b0;
+  font-family: "Arial", sans-serif;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #daa520;
+  text-transform: uppercase;
+}
+
 .status {
-  font-size: 50px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
-.red {
-  color: red;
-}
+
 .green {
-  color: green;
+  color: #32cd32;
+}
+
+.red {
+  color: #ff4500;
+}
+
+.icon {
+  vertical-align: middle;
+  color: inherit;
 }

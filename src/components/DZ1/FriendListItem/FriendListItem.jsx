@@ -2,20 +2,16 @@ import css from "./FriendListItem.module.css";
 import clsx from "clsx";
 import { MdVideoCameraFront } from "react-icons/md";
 import { MdDoNotDisturbOff } from "react-icons/md";
+
 const FriendListItem = ({ name, image, isOnline }) => {
   const icons = {
-    true: <MdVideoCameraFront width={40} />,
-    false: <MdDoNotDisturbOff width={40} />,
+    true: <MdVideoCameraFront className={css.icon} size={24} color="red" />, // Уменьшен размер
+    false: <MdDoNotDisturbOff className={css.icon} size={24} color="green" />,
   };
   return (
-    <div>
-      <img src={image} alt={name} width="48" />
-      <p>{name}</p>
-      {/* {isOnline ? (
-        <p className={css.green}>Online</p>
-      ) : (
-        <p className={css.red}>Offline</p>
-      )} */}
+    <div className={css.card}>
+      <img src={image} alt={name} />
+      <p className={css.name}>{name}</p>
       <p
         className={clsx(css.status, {
           [css.green]: isOnline,
@@ -23,8 +19,8 @@ const FriendListItem = ({ name, image, isOnline }) => {
         })}
       >
         {isOnline ? "Online" : "Offline"}
+        {icons[isOnline]}
       </p>
-      {icons[isOnline]}
     </div>
   );
 };
