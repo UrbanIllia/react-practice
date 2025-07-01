@@ -1,3 +1,4 @@
+
 import { ScaleLoader } from "react-spinners";
 
 const Loader = () => {
@@ -10,6 +11,7 @@ const Loader = () => {
         radius={20}
         barCount={12}
       />
+
     </div>
   );
 };

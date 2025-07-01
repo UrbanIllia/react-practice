@@ -1,7 +1,17 @@
 import { useState } from "react";
 import Container from "../../../Container/Container";
+
 import SearchBar from "../SearchBar/SearchBar";
+<<<<<<< HEAD
 import { RiTailwindCssFill } from "react-icons/ri";
+=======
+import fetchImages from "../fetchUnsplash";
+import ArticlesList from "../ArticlesList/ArticlesList";
+import Loader from "../Loader/Loader";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import ModalImage from "../ModalImage/ModalImage";
+
+>>>>>>> 03bc07a67c670b317dc0cb65449009625fecd079
 import { fetchImages } from "../Api/unsplash";
 import ImageGallery from "../ImageGallery/ImageGallery";
 import ImageModal from "../ImageModal/ImageModal";
@@ -85,6 +95,7 @@ const DZApp = () => {
         />
       </div>
     </Container>
+
   );
 };
 
