@@ -22,7 +22,7 @@ const Category = () => {
   if (!recipes) return <p className="text-center text-white">Loading...</p>;
 
   return (
-    <div className="min-h-screen bg-gray-900/80 p-6 text-white">
+    <div className="min-h-screen p-6 text-white">
       <h2 className="mb-6 text-center text-2xl font-bold">
         Recipes in {categoryId}
       </h2>

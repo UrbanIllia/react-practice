@@ -10,15 +10,9 @@ const RecipesHome = () => {
   return (
     <Container>
       <div
-        className="min-h-screen bg-gray-900/90"
-        style={{
-          backgroundImage: `url('/images/food-1.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
+      // className="min-h-screen bg-gray-900/90"
       >
-        <header className="flex flex-row items-center justify-start gap-10 border-b-2 bg-gray-300/60 p-3">
+        <header className="flex flex-row items-center justify-start gap-10 border-b-2 bg-gradient-to-b from-gray-900 to-gray-300/60 p-3">
           <Link to="/recipeshome">
             <img src="/images/burger.png" alt="" className="ml-4 w-[50px]" />
           </Link>
@@ -45,7 +39,7 @@ const RecipesHome = () => {
             </li>
           </ul>
         </header>
-        <section className="p-6">
+        <section className="">
           <Outlet />
         </section>
       </div>
