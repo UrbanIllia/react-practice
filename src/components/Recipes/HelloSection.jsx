@@ -11,24 +11,12 @@ const HelloSection = () => {
         to cook it!
       </p>
       <div className="absolute bottom-0 left-0 flex flex-row gap-4">
-        <img
-          src="/public/images/svg-food-1.svg"
-          alt="Food-svg"
-          className="w-[90px]"
-        />
-        <img
-          src="/public/images/svg-food-2.svg"
-          alt="Food-svg"
-          className="w-[90px]"
-        />
-        <img
-          src="/public/images/svg-food-3.svg"
-          alt="Food-svg"
-          className="w-[90px]"
-        />
+        <img src="/images/svg-food-1.svg" alt="Food-svg" className="w-[90px]" />
+        <img src="/images/svg-food-2.svg" alt="Food-svg" className="w-[90px]" />
+        <img src="/images/svg-food-3.svg" alt="Food-svg" className="w-[90px]" />
       </div>
       <img
-        src="/public/images/svg-food-smile.svg"
+        src="/images/svg-food-smile.svg"
         alt="Smile-svg"
         className="absolute right-0 bottom-0 w-[90px]"
       />

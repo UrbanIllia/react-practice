@@ -20,11 +20,7 @@ const RecipesHome = () => {
       >
         <header className="flex flex-row items-center justify-start gap-10 border-b-2 bg-gray-300/60 p-3">
           <Link to="/recipeshome">
-            <img
-              src="/public/images/burger.png"
-              alt=""
-              className="ml-4 w-[50px]"
-            />
+            <img src="/images/burger.png" alt="" className="ml-4 w-[50px]" />
           </Link>
           <ul className="flex flex-row items-center justify-start gap-30 pl-30 text-xl text-white">
             <li>

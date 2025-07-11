@@ -33,7 +33,7 @@ const CoctailsMain = () => {
         />
         <Link to="coctailshome">
           <img
-            src="/public/images/coctail-svg.svg"
+            src="/images/coctail-svg.svg"
             alt="Icon-coctail"
             className="absolute top-2 left-3"
             width="70"
