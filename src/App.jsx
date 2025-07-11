@@ -1,22 +1,26 @@
-import React, { Suspense, lazy, useEffect } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import { NavLink, Routes, Route, useLocation } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import HomePage from './components/Recipes/HomePage';
-import RecipesHome from './components/Recipes/RecipesHome';
-import HelloSection from './components/Recipes/HelloSection';
-import FoodApp from './components/Recipes/FoodApp';
-import RecipeDetails from './components/Recipes/RecipeDetails';
-import Instruction from './components/Recipes/Instruction';
-import Category from './components/Recipes/Category';
-
-const baseNavLinkClasses =
-  'px-2 py-1 text-white hover:bg-gray-700 rounded transition-colors duration-200';
-const activeNavLinkClasses = 'bg-amber-800 text-yellow-300 font-bold';
-
-const getNavLinkClass = ({ isActive }) =>
-  `${baseNavLinkClasses} ${isActive ? activeNavLinkClasses : ''}`;
-
+const HomePage = lazy(() => import('./components/Recipes/HomePage'));
+const RecipesHome = lazy(() => import('./components/Recipes/RecipesHome'));
+const HelloSection = lazy(() => import('./components/Recipes/HelloSection'));
+const FoodApp = lazy(() => import('./components/Recipes/FoodApp'));
+const RecipeDetails = lazy(() => import('./components/Recipes/RecipeDetails'));
+const Instruction = lazy(() => import('./components/Recipes/Instruction'));
+const Category = lazy(() => import('./components/Recipes/Category'));
+const Home = lazy(() => import('./components/DZ5/LMS/Home'));
+const About = lazy(() => import('./components/DZ5/LMS/About'));
+const Mission = lazy(() => import('./components/DZ5/LMS/Mission'));
+const Team = lazy(() => import('./components/DZ5/Team'));
+const Reviews = lazy(() => import('./components/DZ5/LMS/Reviews'));
+const Advantages = lazy(() => import('./components/DZ5/LMS/Advantages'));
+const AdvantagesDetails = lazy(
+  () => import('./components/DZ5/LMS/AdvantagesDetails'),
+);
+const Users = lazy(() => import('./components/DZ5/LMS/Users'));
+const UsersDetails = lazy(() => import('./components/DZ5/LMS/UsersDetails'));
+const Posts = lazy(() => import('./components/DZ5/LMS/Posts'));
 const Module1 = lazy(() => import('./components/DZ1/Module1'));
 const Module2 = lazy(() => import('./components/DZ2/Module2'));
 const Quiz = lazy(() => import('./components/DZ2/kahoot/Quiz'));
@@ -29,7 +33,6 @@ const DZApp = lazy(() => import('./components/DZ4/DZ/DZApp/DZApp'));
 const Rock = lazy(() => import('./components/DZ1/Rock/Rock'));
 const Module5 = lazy(() => import('./components/DZ5/Module5/Module5'));
 const CoctailsMain = lazy(() => import('./components/Coctails/CoctailsMain'));
-const RecipesApp = lazy(() => import('./components/Recipes/RecipesApp'));
 const CoctailsHome = lazy(() => import('./components/Coctails/CoctailsHome'));
 const CoctailsApp = lazy(() => import('./components/Coctails/CoctailsApp'));
 const SearchApp = lazy(() => import('./components/Coctails/SearchApp'));
@@ -39,6 +42,13 @@ const CoctailDetails = lazy(
 const CoctailsNotFound = lazy(
   () => import('./components/Coctails/CoctailsNotFound'),
 );
+
+const baseNavLinkClasses =
+  'px-2 py-1 text-white hover:bg-gray-700 rounded transition-colors duration-200';
+const activeNavLinkClasses = 'bg-amber-800 text-yellow-300 font-bold';
+
+const getNavLinkClass = ({ isActive }) =>
+  `${baseNavLinkClasses} ${isActive ? activeNavLinkClasses : ''}`;
 
 function App() {
   const location = useLocation();
@@ -136,7 +146,23 @@ function App() {
           <Route path="/react2" element={<Module2 />} />
           <Route path="/react3" element={<Module3 />} />
           <Route path="/react4" element={<Module4 />} />
-          <Route path="/react5" element={<Module5 />} />
+          <Route path="/react5" element={<Module5 />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />}>
+              <Route path="mission" element={<Mission />} />
+              <Route path="team" element={<Team />} />
+              <Route path="reviews" element={<Reviews />} />
+            </Route>
+            <Route path="advantages" element={<Advantages />} />
+            <Route
+              path="advantages/:productId"
+              element={<AdvantagesDetails />}
+            />
+            <Route path="users" element={<Users />} />
+            <Route path="users/:userId" element={<UsersDetails />}>
+              <Route path="posts" element={<Posts />} />
+            </Route>
+          </Route>
           <Route path="/react6" element={<Module6 />} />
           <Route path="/" element={<Quiz />} /> {/* Дефолтна сторінка */}
         </Routes>
