@@ -11,7 +11,7 @@ const CoctailDetails = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const location = useLocation();
-  const { coctailId } = useParams();
+  const { coctailsId } = useParams();
   const backLinkHref = location.state ?? '/coctails';
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const CoctailDetails = () => {
       try {
         setLoading(true);
         setError(null);
-        const response = await getCocktailDetails(coctailId);
+        const response = await getCocktailDetails(coctailsId);
         setDetails(response);
       } catch (error) {
         setError(error.message || 'Failed to fetch cocktail details');
@@ -29,7 +29,7 @@ const CoctailDetails = () => {
     };
 
     getData();
-  }, [coctailId]);
+  }, [coctailsId]);
 
   if (loading) return <LoaderUser />;
   if (error) return <ErrorMessage error={error} />;

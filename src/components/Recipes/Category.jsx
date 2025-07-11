@@ -32,7 +32,7 @@ const Category = () => {
             key={item.id}
             className="rounded-lg bg-gray-800/80 p-4 shadow-md transition hover:shadow-lg"
           >
-            <Link to={`/recipeshome/recipes/${item.id}`} className="block">
+            <Link to={`/recipeshome/home/recipes/${item.id}`} className="block">
               <img
                 src={item.image}
                 alt={item.name || 'Recipe image'}

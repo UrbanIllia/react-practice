@@ -46,7 +46,7 @@ const FoodApp = () => {
       {recipes.length > 0 ? (
         <ul className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {recipes.map((item) => (
-            <Link state={location} to={`/recipeshome/recipes/${item.id}`}>
+            <Link state={location} to={`/recipeshome/home/recipes/${item.id}`}>
               <li
                 key={item.id}
                 className="cursor-pointer rounded-lg bg-gray-800/80 p-4 text-white shadow-md transition hover:scale-[1.08]"

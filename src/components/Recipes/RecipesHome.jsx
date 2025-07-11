@@ -1,12 +1,6 @@
-import { Link, Outlet, Routes, Route, NavLink } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
-import Container from '../Container/Container';
-import Category from './Category';
+import { Link, Outlet, NavLink } from 'react-router-dom';
 
-const HelloSection = lazy(() => import('./HelloSection'));
-const FoodApp = lazy(() => import('./FoodApp'));
-const Instruction = lazy(() => import('./Instruction'));
-const RecipeDetails = lazy(() => import('./RecipeDetails'));
+import Container from '../Container/Container';
 
 const style =
   'px-8 py-2 rounded-2xl flex justify-center items-center transition border-t-2 border-b-2 text-gray-800 bg-transparent hover:bg-gray-400/60';
@@ -25,7 +19,7 @@ const RecipesHome = () => {
         }}
       >
         <header className="flex flex-row items-center justify-start gap-10 border-b-2 bg-gray-300/60 p-3">
-          <Link to="/">
+          <Link to="/recipeshome">
             <img
               src="/public/images/burger.png"
               alt=""
@@ -35,7 +29,7 @@ const RecipesHome = () => {
           <ul className="flex flex-row items-center justify-start gap-30 pl-30 text-xl text-white">
             <li>
               <NavLink
-                to="/"
+                to="/recipeshome/home"
                 className={({ isActive }) =>
                   `${style} ${isActive ? styleActive : ''}`
                 }
@@ -45,7 +39,7 @@ const RecipesHome = () => {
             </li>
             <li>
               <NavLink
-                to="/recipeshome/recipes"
+                to="/recipeshome/home/recipes"
                 className={({ isActive }) =>
                   `${style} ${isActive ? styleActive : ''}`
                 }
@@ -56,17 +50,7 @@ const RecipesHome = () => {
           </ul>
         </header>
         <section className="p-6">
-          <Suspense fallback={<h2>Loading...</h2>}>
-            <Routes>
-              <Route index element={<HelloSection />} />
-              <Route path="recipes" element={<FoodApp />} />
-              <Route path="recipes/:recipeId" element={<RecipeDetails />}>
-                <Route path="instruction" element={<Instruction />} />
-                <Route path="category/:categoryId" element={<Category />} />
-              </Route>
-            </Routes>
-            {/* <Outlet /> */}
-          </Suspense>
+          <Outlet />
         </section>
       </div>
     </Container>

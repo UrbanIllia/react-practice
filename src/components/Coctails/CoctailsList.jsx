@@ -9,7 +9,7 @@ const CoctailsList = ({
       key={idDrink}
       className="transform rounded-lg bg-gray-900/90 p-6 shadow-md transition-all duration-200 hover:scale-105 hover:shadow-lg"
     >
-      <Link to={`/coctails/${idDrink}`} state={location}>
+      <Link to={`/coctailshome/coctails/${idDrink}`} state={location}>
         <img
           src={strDrinkThumb}
           alt={strDrink}

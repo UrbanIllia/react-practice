@@ -20,7 +20,7 @@ const CocktailInfo = ({
 
   return (
     <div
-      className="flex items-center justify-center py-10"
+      className="flex items-center justify-center px-4 py-10"
       style={{
         backgroundImage: `url('/images/123.jpg')`,
         backgroundSize: 'cover',
