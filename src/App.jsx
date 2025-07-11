@@ -15,6 +15,9 @@ import MemoryGame from "./components/DZ4/MemoryGame/MemoryGame";
 import DZApp from "./components/DZ4/DZ/DZApp/DZApp";
 import Rock from "./components/DZ1/Rock/Rock";
 import Module5 from "./components/DZ5/Module5/Module5";
+import CoctailsApp from "./components/Coctails/CoctailsApp";
+import CoctailsMain from "./components/Coctails/CoctailsMain";
+import RecipesApp from "./components/Recipes/RecipesApp";
 
 function App() {
   const [tabIndex, setTabIndex] = useState(() => {
@@ -30,6 +33,8 @@ function App() {
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList className={css.tablist}>
           <Tab className={css.tabitem}>Quiz</Tab>
+          <Tab className={css.tabitem}>Coctails</Tab>
+          <Tab className={css.tabitem}>Recipes</Tab>
           <Tab className={css.tabitem}>Grid</Tab>
           <Tab className={css.tabitem}>MemoryGame</Tab>
           <Tab className={css.tabitem}>SearchImg_TW</Tab>
@@ -44,6 +49,12 @@ function App() {
 
         <TabPanel>
           <Quiz />
+        </TabPanel>
+        <TabPanel>
+          <CoctailsMain />
+        </TabPanel>
+        <TabPanel>
+          <RecipesApp />
         </TabPanel>
         <TabPanel>
           <Grid />
@@ -88,6 +99,12 @@ function App() {
         pauseOnHover
         theme="dark"
       />
+      <img
+        className="absolute top-1 left-0"
+        src="/images/Urban-4.png"
+        alt="Urban"
+        width="120"
+      ></img>
     </>
   );
 }

@@ -6,13 +6,10 @@ import SearchBar from "../SearchBar/SearchBar";
 import { RiTailwindCssFill } from "react-icons/ri";
 
 import fetchImages from "../fetchUnsplash";
-
 import Loader from "../Loader/Loader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import ImageGallery from "../ImageGallery/ImageGallery";
 import ImageModal from "../ImageModal/ImageModal";
-// import ErrorMessage from "../ErrorMessage/ErrorMessage";
-// import Loader from "../Loader/Loader";
 
 const DZApp = () => {
   const [articles, setArticles] = useState([]);
@@ -59,8 +56,16 @@ const DZApp = () => {
   };
   return (
     <Container>
-      <div className="my-8 mx-10 py-4 bg-emerald-200 flex flex-col justify-center relative items-center">
-        <h2 className="text-5xl text-center font-black text-lime-800">
+      <div
+        className="my-8 mx-10 py-10  bg-emerald-200 flex flex-col  relative items-center min-h-screen"
+        style={{
+          backgroundImage: `url('/images/34.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <h2 className="text-5xl text-center font-black text-white">
           Search Pictures
         </h2>
         <SearchBar onSubmit={handleSearch} />

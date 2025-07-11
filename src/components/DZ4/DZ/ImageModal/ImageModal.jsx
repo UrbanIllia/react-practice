@@ -9,8 +9,10 @@ const ImageModal = ({ data, onRequestClose, isOpen }) => {
     <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
-      overlayClassName="overlay fixed top-0 left-0 right-0 bottom-0 bg-[rgba(15,32,39,0.9)] flex items-center justify-center"
-      className="modal max-w-[90%] max-h-[90vh] bg-gradient-to-bl from-[#2c5364] via-[#203a43] to-[#0f2027] rounded-xl p-5 outline-none shadow-lg overflow-auto"
+      overlayClassName="overlay fixed top-0 left-0 right-0 bottom-0 bg-[rgba(15,32,39,0.9)] 
+      flex items-center justify-center"
+      className="modal max-w-[90%] max-h-[90vh] bg-gradient-to-bl from-[#2c5364] via-[#203a43]
+       to-[#0f2027] rounded-xl p-5 outline-none shadow-lg overflow-auto"
     >
       <div className="w-full h-full flex flex-col items-center">
         <img
