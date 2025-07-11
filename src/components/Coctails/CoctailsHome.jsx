@@ -1,4 +1,3 @@
-// import { LiaCocktailSolid } from 'react-icons/lia';
 import { LuArrowBigUp } from 'react-icons/lu';
 
 const images = [
@@ -35,7 +34,6 @@ const CoctailsHome = () => {
           </li>
         ))}
       </ul>
-      {/* <LiaCocktailSolid className="absolute top-0 left-0" size={180} /> */}
       <LuArrowBigUp size={90} className="absolute top-[-30px] left-[640px]" />
     </div>
   );
