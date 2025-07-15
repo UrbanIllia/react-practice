@@ -1,12 +1,18 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // Онови, якщо структура інша
-  ],
+
+export default {
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       backgroundImage: {
-        "cocktail-bg": "url('/images/cocktail-background.jpg')", // Перевір шлях
+        'cocktail-bg': "url('/images/cocktail-background.jpg')",
+      },
+      colors: {
+        'dark-primary': 'var(--dark-primary)',
+        'light-primary': 'var(--light-primary)',
+        'light-secondary': 'var(--light-secondary)',
+        accent: 'var(--accent)',
+        'btn-disabled': 'var(--btn-disabled)',
       },
     },
   },

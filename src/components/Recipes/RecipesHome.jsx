@@ -9,9 +9,7 @@ const styleActive = 'text-amber-500 shadow-[0px_0px_10px_10px_rgba(0,0,0,0.5)]';
 const RecipesHome = () => {
   return (
     <Container>
-      <div
-      // className="min-h-screen bg-gray-900/90"
-      >
+      <div>
         <header className="flex flex-row items-center justify-start gap-10 border-b-2 bg-gradient-to-b from-gray-900 to-gray-300/60 p-3">
           <Link to="/recipeshome">
             <img src="/images/burger.png" alt="" className="ml-4 w-[50px]" />
