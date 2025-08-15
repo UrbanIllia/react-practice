@@ -1,21 +1,15 @@
-import AppBar from '../Redux/AppBar/AppBar';
-import Layout from '../Redux/Layout/LayOut';
-import TaskForm from '../Redux/TaskForm/TaskForm';
-import TaskList from '../Redux/TaskList/TaskList';
-import store from '../../../redux/store.js';
-import { Provider } from 'react-redux';
+import { TbBrandRedux } from 'react-icons/tb';
+import getRandomColorLight from '../../../utils/getRandomColorLight.js';
 import CounterRedux from '../ReduxCounter/CounterRedux.jsx';
+import ReduxToDoList from '../ReduxToDoList/ReduxToDoList.jsx';
 
 export const Module6 = () => {
   return (
-    <Provider store={store}>
-      <Layout>
-        {/* <AppBar /> */}
-        {/* <TaskForm />
-        <TaskList /> */}
-        <CounterRedux />
-      </Layout>
-    </Provider>
+    <div className="flex flex-col items-center justify-center">
+      <TbBrandRedux size={120} color={getRandomColorLight()} />
+      <CounterRedux />
+      <ReduxToDoList />
+    </div>
   );
 };
 export default Module6;
