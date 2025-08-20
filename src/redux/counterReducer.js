@@ -22,8 +22,9 @@ export const counterReducer = (state = initialState, action) => {
     case changeStep.type:
       return {
         ...state,
-        step: (state.step = action.payload),
+        step: action.payload,
       };
+
     default:
       return state;
   }
