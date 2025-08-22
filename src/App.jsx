@@ -2,6 +2,14 @@ import { Suspense, lazy, useEffect } from 'react';
 import { NavLink, Routes, Route, useLocation } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ProductsHome from './components/DZ6/Products/ProductsHome';
+import Products from './components/DZ6/Products/Products';
+import Favourites from './components/DZ6/Products/Favourites';
+import Cart from './components/DZ6/Products/Cart';
+
+const ProductsMain = lazy(
+  () => import('./components/DZ6/Products/ProductsMain'),
+);
 const HomePage = lazy(() => import('./components/Recipes/HomePage'));
 const RecipesHome = lazy(() => import('./components/Recipes/RecipesHome'));
 const HelloSection = lazy(() => import('./components/Recipes/HelloSection'));
@@ -62,12 +70,13 @@ function App() {
       '/memorygame': 4,
       '/searchimg-tw': 5,
       '/rock': 6,
-      '/react1': 7,
-      '/react2': 8,
-      '/react3': 9,
-      '/react4': 10,
-      '/react5': 11,
-      '/react6': 12,
+      '/products': 7,
+      '/react1': 8,
+      '/react2': 9,
+      '/react3': 10,
+      '/react4': 11,
+      '/react5': 12,
+      '/react6': 13,
     };
     const currentTab = tabMap[location.pathname] || 0;
     localStorage.setItem('activeTab', currentTab);
@@ -96,6 +105,9 @@ function App() {
         </NavLink>
         <NavLink to="/rock" className={getNavLinkClass}>
           Rock
+        </NavLink>
+        <NavLink to="/product-shop" className={getNavLinkClass}>
+          Products
         </NavLink>
         <NavLink to="/react1" className={getNavLinkClass}>
           React 1
@@ -142,6 +154,15 @@ function App() {
           <Route path="/memorygame" element={<MemoryGame />} />
           <Route path="/searchimg-tw" element={<DZApp />} />
           <Route path="/rock" element={<Rock />} />
+          {/* ................................................... */}
+          <Route path="/product-shop" element={<ProductsMain />}>
+            <Route index element={<ProductsHome />} />
+            <Route path="products" element={<Products />} />
+            <Route path="favourites" element={<Favourites />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="*" element={<NotFoundProduct />} />
+          </Route>
+          {/* ...................................................... */}
           <Route path="/react1" element={<Module1 />} />
           <Route path="/react2" element={<Module2 />} />
           <Route path="/react3" element={<Module3 />} />
@@ -164,7 +185,7 @@ function App() {
             </Route>
           </Route>
           <Route path="/react6" element={<Module6 />} />
-          <Route path="/" element={<Quiz />} /> {/* Дефолтна сторінка */}
+          <Route path="/" element={<Quiz />} />
         </Routes>
       </Suspense>
 

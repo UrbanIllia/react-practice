@@ -11,3 +11,7 @@ export const reset = createAction('reset');
 export const changeStep = createAction('changeStep');
 
 // todos
+
+export const addTodo = createAction('addTodo');
+export const deleteTodo = createAction('deleteTodo');
+export const addQuery = createAction('addQuery');
