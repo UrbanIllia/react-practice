@@ -4,7 +4,7 @@ import {
   decrement,
   increment,
   reset,
-} from '../../../redux/actions';
+} from '../../../redux/counterSlice';
 
 const CounterRedux = () => {
   const counter = useSelector((state) => state.counter.counter);

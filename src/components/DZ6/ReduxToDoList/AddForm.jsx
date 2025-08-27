@@ -1,8 +1,18 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 
-const AddForm = () => {
+const AddForm = ({ handleAddTodo }) => {
+  const initialValues = {
+    todo: '',
+    author: '',
+  };
+  const handleSearch = (values, options) => {
+    console.log(values);
+    handleAddTodo(values);
+    options.resetForm();
+  };
+
   return (
-    <Formik>
+    <Formik initialValues={initialValues} onSubmit={handleSearch}>
       <Form className="mx-auto flex max-w-md flex-col gap-4 rounded-lg bg-white p-6 shadow-md">
         <div className="justify-centeritemsc mb-4 flex flex-col gap-3">
           <div className="relative mb-4">
