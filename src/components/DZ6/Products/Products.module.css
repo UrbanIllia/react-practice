@@ -1,0 +1,15 @@
+.link {
+  font-size: 20px;
+  color: black;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  transition: all 200ms ease-out;
+}
+.link:hover {
+  background-color: #59596c;
+  color: #a9a9a9;
+  transform: scale(1.1);
+}
+.active {
+  box-shadow: 0 0 3px 3px #59596c;
+}

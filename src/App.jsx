@@ -6,6 +6,9 @@ import ProductsHome from './components/DZ6/Products/ProductsHome';
 import Products from './components/DZ6/Products/Products';
 import Favourites from './components/DZ6/Products/Favourites';
 import Cart from './components/DZ6/Products/Cart';
+import NotFoundProduct from './components/DZ6/Products/NotFoundProduct';
+import ProductsDetails from './components/DZ6/Products/ProductsDetails';
+import Container from './components/Container/Container';
 
 const ProductsMain = lazy(
   () => import('./components/DZ6/Products/ProductsMain'),
@@ -83,7 +86,7 @@ function App() {
   }, [location]);
 
   return (
-    <>
+    <Container>
       <nav className="flex flex-row items-center justify-center gap-2 border-b-4 border-black bg-gray-900 p-2 text-lg">
         <NavLink to="/quiz" className={getNavLinkClass}>
           Quiz
@@ -158,6 +161,7 @@ function App() {
           <Route path="/product-shop" element={<ProductsMain />}>
             <Route index element={<ProductsHome />} />
             <Route path="products" element={<Products />} />
+            <Route path="products/:productId" element={<ProductsDetails />} />
             <Route path="favourites" element={<Favourites />} />
             <Route path="cart" element={<Cart />} />
             <Route path="*" element={<NotFoundProduct />} />
@@ -207,7 +211,7 @@ function App() {
         alt="Urban"
         width="120"
       />
-    </>
+    </Container>
   );
 }
 

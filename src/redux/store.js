@@ -12,21 +12,35 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import { productReducer } from './productsSlice';
+import { cartReducer } from './cartSlice';
+import { favReducer } from './FavouritesSlice';
 
 const persistConfig = {
-  key: 'root-todos',
+  key: 'products',
+  version: 1,
+  storage,
+  whiteList: [],
+  blackList: [],
+};
+const persistFavConfig = {
+  key: 'favourites',
   version: 1,
   storage,
   whiteList: [],
   blackList: [],
 };
 
-const persistedReducer = persistReducer(persistConfig, todoReducer);
+const persistedReducer = persistReducer(persistConfig, cartReducer);
+const persistedFavReducer = persistReducer(persistFavConfig, favReducer);
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
-    todos: persistedReducer,
+    todos: todoReducer,
+    products: productReducer,
+    cart: persistedReducer,
+    favourites: persistedFavReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
